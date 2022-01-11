@@ -6,7 +6,7 @@ namespace Iterator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("TEST!");
+            Console.WriteLine("Hellow World!");
         }
     }
 }
