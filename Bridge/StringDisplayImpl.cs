@@ -3,13 +3,13 @@ using System.Text;
 
 namespace Bridge
 {
-     class StringDisplayImp1 : DisplayImpl
+    class StringDisplayImpl : DisplayImpl
     {
         private string str;
         private int width;
 
         // コンストラクタ
-        public StringDisplayImp1(string str)
+        public StringDisplayImpl(string str)
         {
             this.str = str;
             this.width = Encoding.GetEncoding("utf-8").GetByteCount(str);
