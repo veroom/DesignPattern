@@ -14,20 +14,19 @@ namespace Prototype
             this.decochar = decochar;
         }
 
-        // C#では使用しない
+        // インスタンスをコピー
         public object Clone()
         {
-            throw new NotImplementedException();
+            MessageBox messageBox = new MessageBox(this.decochar);
+            return messageBox;
         }
 
         /// <summary>
-        ///インスタンスのコピー作成
+        /// インスタンスのコピー作成
         /// </summary>
         public Product createClone()
         {
-            Product p = null;
-            p = (Product)MemberwiseClone();
-            return p;
+            return (Product)Clone();
         }
 
         /// <summary>
