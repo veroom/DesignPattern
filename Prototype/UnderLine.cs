@@ -14,10 +14,11 @@ namespace Prototype
             this.ulchar = ulchar;
         }
 
-        // C#では使用しない
+        // インスタンスをコピー
         public object Clone()
         {
-            throw new NotImplementedException();
+            UnderLine underLine = new UnderLine(this.ulchar);
+            return underLine;
         }
 
         /// <summary>
@@ -25,9 +26,7 @@ namespace Prototype
         /// </summary>
         public Product createClone()
         {
-            Product p = null;
-            p = (Product)MemberwiseClone();
-            return p;
+            return (Product)Clone();
         }
 
         /// <summary>
@@ -37,6 +36,7 @@ namespace Prototype
         {
             int length = Encoding.GetEncoding("utf-8").GetByteCount(s);
             Console.WriteLine("\"" + s + "\"");
+            Console.Write(" ");
 
             for (int i = 0; i < length; i++)
             {
